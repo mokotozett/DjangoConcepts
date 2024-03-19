@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- CSS files -->
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock %}
+
+<!-- Header Content -->
+{% block header %}    
+    <h1>Motoko MainFrame</h1>
+{% endblock %}
+
+<!-- Left Side of page -->
+{% block left %}
+    <div><h2>Todo list</h2></div>
+    <ul>
+        <li>
+            <h3>When Center expands, footer should not overlay</h3>
+        </li>
+        <li>
+            <h3>Second Item</h3>
+        </li>
+    </ul>
+{% endblock %}
+
+<!-- Center Page Content -->
+{% block center %}
+
+<div class="title">
+    <h1>Various Concept Studies</h1>
+</div>
+
+<img class="esaki" src="{% static 'esaki.gif' %}">
+
+
+
+
+
+{% endblock %}
+
+<!-- Right Side page Content -->
+{% block right %}
+    <div><h2>Intereting Links ?</h2></div>
+    <ol>
+        <li>
+            <a class="nav-link" href="{% url 'home' %}">Canvas08</a>
+            <p>Three js. Moving 3d Objects around the scene.</p>
+        </li>
+    </ol>
+{% endblock %}
+
+<!-- Footer Content -->
+{% block footer %}
+<p>This page was last edited on 5 March 2024, at 10:33 (UTC).</p>
+<p>Text is available under the Creative Commons Attribution-ShareAlike License 4.0; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.</p>
+<p>
+    Internal Links:
+    Privacy policy
+    About Wikipedia
+    Disclaimers
+    Contact Wikipedia
+    Code of Conduct
+    Developers
+    Statistics
+    Cookie statement
+    Mobile view
+</p>
+{% endblock %}
+
+<!-- JS files -->
+{% block script %}
+    <script src="{% static 'home.js' %}" type="module"></script>
+{% endblock %}

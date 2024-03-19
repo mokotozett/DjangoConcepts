@@ -1,0 +1,42 @@
+body {
+    background-color: #11192b;
+}
+
+h1,
+h2,
+h3 {
+    color: aqua;
+}
+
+p {
+    color: aqua;
+    font-size: 18px;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+.header { grid-area: 1 / 1 / 2 / 6;
+    display: grid;
+    grid-template-columns: 100px repeat(4, 1fr);
+}
+.menu{
+    grid: 1/1/2/2;
+}
+
+
+.left { grid-area: 2 / 1 / 5 / 2; border: solid gold;}
+.center { grid-area: 2 / 2 / 5 / 5; border: solid gold;}
+.esaki{width: 80%; height: 80%;}
+.right { grid-area: 2 / 5 / 5 / 6; border: solid gold;}
+
+.footer { grid-area: 5 / 1 / -1 / -1; border: solid green;}
+
+
