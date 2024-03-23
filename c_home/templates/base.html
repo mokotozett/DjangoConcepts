@@ -5,45 +5,20 @@
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'navbar.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
-
-
     {% block style %}{% endblock %}
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-        <a class="nav-link" href="{% url 'html_home' %}">HTML CSS</a>
-        <a class="nav-link" href="{% url 'home' %}">Home</a>
-
-
-    </div>
-
-
 </head>
 
 <body>
-
 <div class="container">
-    <div class="header">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">
-            <img class="smiley" src="{% static 'smiley.gif' %}" alt="HTML tutorial" style="width:80px;height:80px;">
-        </span>
-        <div></div>
-        <div>{% block header %}    {% endblock %}</div>
-        <div></div>
-        <div></div>
-    </div>
+    <div class="header"> 
+        {% include 'navbar.html' %} 
+        {% block header %}   {% endblock %} </div>
     <div class="left">{% block left %}    {% endblock %}</div>
     <div class="center">{% block center %}    {% endblock %} </div>
     <div class="right">{% block right %}    {% endblock %}</div>
     <div class="footer">{% block footer %}    {% endblock %}</div> 
 </div>
-
-
-
 </body>
     
-    <script src="{% static 'home.js' %}"></script>
-{% block script %}    {% endblock %}
+<script src="{% static 'home.js' %}"></script>
+    {% block script %}    {% endblock %}
