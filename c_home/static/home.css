@@ -28,6 +28,8 @@ p {
 .header { grid-area: 1 / 1 / 2 / 6;
     display: grid;
     grid-template-columns: 100px repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
 }
 .menu{
     grid: 1/1/2/2;
@@ -36,7 +38,7 @@ p {
 
 .left { grid-area: 2 / 1 / 5 / 2; border: solid gold;}
 .center { grid-area: 2 / 2 / 5 / 5; border: solid gold;}
-.esaki{width: 80%; height: 80%;}
+.esaki{width: auto; height: auto;}
 .right { grid-area: 2 / 5 / 5 / 6; border: solid gold;}
 
 .footer { grid-area: 5 / 1 / -1 / -1; border: solid green;}
