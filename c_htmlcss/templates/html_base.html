@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'html_home.css' %}">
+    {% block stylesheets %}    {% endblock %}
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">{% block header %} {% endblock %} </div>
+        <div class="left">{% block left %}    {% endblock %}</div>
+        <div class="center">{% block center %}    {% endblock %} </div>
+        <div class="right">{% block right %}    {% endblock %}</div>
+        <div class="footer">{% block footer %}    {% endblock %}</div> 
+    </div>
+</body>
+    
+<script src="{% static 'home.js' %}"></script>
+    {% block script %}    {% endblock %}
