@@ -1,14 +1,13 @@
-{% extends "base.html" %}
+{% extends "html_base.html" %}
 {% load static %}
 
 <!-- CSS files -->
 {% block style %}
-<!-- CSS files     <link rel="stylesheet" type="text/css" href="{% static 'html_home.css' %}">  -->
 {% endblock %}
 
 <!-- Header Content -->
 {% block header %} 
-<h1>TItle</h1>   
+<h1>This is a change only for the Feature HTML branch</h1>   
 {% endblock %}
 
 <!-- Left Side of page -->
@@ -20,11 +19,6 @@
 {% block center %}
 <h1>Center</h1>
 <img class="esaki" src="{% static 'motoko2045.gif' %}">
-
-
-
-
-
 {% endblock %}
 
 <!-- Right Side page Content -->
