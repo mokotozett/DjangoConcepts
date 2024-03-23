@@ -9,7 +9,9 @@
 
 <body>
     <div class="container">
-        <div class="header">{% block header %} {% endblock %} </div>
+        <div class="header">
+            {% include 'navbar.html' %} 
+            {% block header %} {% endblock %} </div>
         <div class="left">{% block left %}    {% endblock %}</div>
         <div class="center">{% block center %}    {% endblock %} </div>
         <div class="right">{% block right %}    {% endblock %}</div>

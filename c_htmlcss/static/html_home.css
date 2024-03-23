@@ -24,6 +24,8 @@ p {
 
 .header { grid-column: span 3;
     border: solid red;
+    align-items: center;
+    justify-content: center;
 }
 
 
