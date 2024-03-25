@@ -14,25 +14,40 @@ p {
 }
 
 
-
 .container {
     display: grid;
-    grid-template-columns: 100px 1fr 100px;
+    grid-template-columns: 200px 1fr 100px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }
 
+/* HEADER SECTION */
 .header { grid-column: span 3;
     border: solid red;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.html_navbar{
+    grid-column: 1;
+}
+.html_title{
+    grid-column: 2;
+    font-size: 14;
+    justify-self: center;
+    
 }
 
+/* LEFT SECTION */
+.left { 
+    grid-column: 1; border: solid gold;
+    color: aqua;
+    font-size: 18px;
+}
 
-.left { grid-column: 1; border: solid gold;}
 .center { grid-column: 2; border: solid gold;}
 .esaki{width: auto; height: auto;}
 .right { grid-column: 3; border: solid gold;}
+.footer { grid-column: span 3; border: solid gold;}
 
 
 

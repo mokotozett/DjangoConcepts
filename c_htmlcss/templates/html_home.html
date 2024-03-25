@@ -6,21 +6,27 @@
 {% endblock %}
 
 <!-- Header Content -->
-{% block header %} 
-<div>
-    <h1>This is a change only for the Feature HTML branch</h1>   
-</div>
+{% block header %}
+<h1>HTML Concepts</h1>
 {% endblock %}
 
 <!-- Left Side of page -->
 {% block left %}
-<h1>LEFT</h1>
+<ul class="list_of_topics">
+    <h3>List of Topics</h3>
+    <li>
+        <div>The Grid</div>
+    </li><br>
+    <li>
+        <div>CSS Tricks</div>
+    </li><br>
+</ul>
 {% endblock %}
 
 <!-- Center Page Content -->
 {% block center %}
 <h1>Center</h1>
-<img class="esaki" src="{% static 'motoko2045.gif' %}">
+    <img class="esaki" src="{% static 'motoko2045.gif' %}">
 {% endblock %}
 
 <!-- Right Side page Content -->
@@ -30,10 +36,10 @@
 
 <!-- Footer Content -->
 {% block footer %}
-<h1>Footer</h1>
+<h2>Hello Footer</h2>
 {% endblock %}
 
 <!-- JS files -->
 {% block script %}
-    <script src="{% static 'html_home.js' %}" type="module"></script>
+<script src="{% static 'html_home.js' %}" type="module"></script>
 {% endblock %}
