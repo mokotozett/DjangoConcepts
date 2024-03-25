@@ -1,0 +1,52 @@
+{% extends "js_base.html" %}
+{% load static %}
+
+<!-- CSS files -->
+{% block style %} {% endblock %}
+
+<!-- Header Content -->
+{% block header %}
+<h1>JS Main Page</h1>
+
+{% endblock %}
+
+<!-- Left Side of page -->
+{% block left %}
+<div class="left_container">
+    <ul class="left_list">
+        <h2>Click one to view</h2>
+        <li>
+            <h3>The Canvas</h3>
+        </li>
+        <li>
+            <h3>Movement</h3>
+        </li>
+        <li>
+            <h3>3D object</h3>
+        </li>
+    </ul>
+    <img class="darkness" src="{% static 'darkness.gif' %}">
+
+</div>
+{% endblock %}
+
+<!-- Center Page Content -->
+{% block center %}
+<h1>Center</h1>
+
+{% endblock %}
+
+<!-- Right Side page Content -->
+{% block right %}
+<h1>Right</h1>
+{% endblock %}
+
+<!-- Footer Content -->
+{% block footer %}
+<h1>Footer</h1>
+{% endblock %}
+
+<!-- JS files -->
+{% block script %}
+<script src="{% static 'html_home.js' %}" type="module"></script>
+{% endblock %}
