@@ -21,6 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("c_home.urls")),
     path('htmlcss/', include("c_htmlcss.urls")),
+    path('javascript/', include("c_javascript.urls")),
+
 
 
 
