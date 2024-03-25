@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'js_home.css' %}">
+    {% block stylesheets %}    {% endblock %}
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbarz"> {% include 'navbar.html' %} </div>
+            <div class="header_titlez">{% block header %} {% endblock %}</div>
+        </div>
+        <div class="left">{% block left %}    {% endblock %}</div>
+        <div class="center">{% block center %}    {% endblock %} </div>
+        <div class="right">{% block right %}    {% endblock %}</div>
+        <div class="footer">{% block footer %}    {% endblock %}</div> 
+    </div>
+</body>
+    
+<script src="{% static 'home.js' %}"></script>
+    {% block script %}    {% endblock %}
