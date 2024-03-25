@@ -22,6 +22,7 @@ urlpatterns = [
     path('', include("c_home.urls")),
     path('htmlcss/', include("c_htmlcss.urls")),
     path('javascript/', include("c_javascript.urls")),
+    path('database/', include("c_databases.urls")),
 
 
 
