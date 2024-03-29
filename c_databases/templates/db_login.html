@@ -1,0 +1,22 @@
+{% extends "db_base.html" %}
+{% load static %}
+
+
+
+<!-- Header Content -->
+{% block header %}
+<h1>Login Form</h1>
+{% endblock %}
+
+
+<!-- Center Page Content -->
+{% block center %}
+
+<h1>Login</h1>
+<form class="login_form" action="{% url 'db_login' %}" method="post">
+    {% csrf_token %}
+    {{ login_dict }}
+    <input type="submit" value="Login">
+</form>
+
+{% endblock %}

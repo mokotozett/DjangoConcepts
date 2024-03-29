@@ -1,0 +1,53 @@
+{% extends "db_base.html" %}
+{% load static %}
+
+
+
+<!-- CSS files -->
+{% block style %} {% endblock %}
+
+<!-- Header Content -->
+{% block header %}
+<h1>Models 01</h1>
+
+{% endblock %}
+
+<!-- Left Side of page -->
+{% block left %}
+{% endblock %}
+
+<!-- Center Page Content -->
+{% block center %}
+
+<h1>Database Table display</h1>
+<a href="https://youtu.be/RCE3VUpzGw0?si=1TNOFFkoSFFFE84y">Net Ninja Youtube Tutorial</a>
+
+    <div class="the_articles">
+
+        {% for each in a_dict %}
+            <div class="an_article">
+                <h3><a href="{% url 'db_article_detail' slug=each.slug %}">{{ each.title }}</a></h3>
+                <h3>{{ each.snippet }}</h3>
+                <h3>{{ each.date }}</h3>
+            </div>
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}
+
+<!-- Right Side page Content -->
+{% block right %}
+<h1>Right</h1>
+{% endblock %}
+
+<!-- Footer Content -->
+{% block footer %}
+<h1>Footer</h1>
+{% endblock %}
+
+<!-- JS files -->
+{% block script %}
+<script src="{% static 'html_home.js' %}" type="module"></script>
+{% endblock %}

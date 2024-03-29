@@ -2,9 +2,10 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'db_home.css' %}">
-    {% block stylesheets %}    {% endblock %}
+    {% block stylesheets %} {% endblock %}
 </head>
 
 <body>
@@ -12,13 +13,50 @@
         <div class="header">
             <div class="navbarz"> {% include 'navbar.html' %} </div>
             <div class="header_titlez">{% block header %} {% endblock %}</div>
+            <nav class="db_header">
+                <ul>
+                    <li>
+                        {% if user.is_authenticated %}
+                            <p>Welcome, {{ user.get_username }}. </p>
+                            <form class="logout" action="{% url 'db_logout' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit">Logout</button>
+                            </form>
+                        {% endif %}
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="left">{% block left %}    {% endblock %}</div>
-        <div class="center">{% block center %}    {% endblock %} </div>
-        <div class="right">{% block right %}    {% endblock %}</div>
-        <div class="footer">{% block footer %}    {% endblock %}</div> 
+
+        <div class="left">
+            <div class="left_container">
+                <ul class="left_list">
+                    <h2><a class="nav-link" href="{% url 'db_home' %}"><img class="megumin"
+                                src="{% static 'megumin.gif' %}">Home</a></h2>
+                    <li>
+                        <a class="nav-link" href="{% url 'db_models' %}">Models</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'db_signup' %}">Sign Up</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'db_login' %}">Login</a>
+                    </li>
+
+                </ul>
+                <img class="aqua" src="{% static 'aqua.gif' %}">
+            </div>
+
+            {% block left %}
+
+            {% endblock %}
+        </div>
+
+        <div class="center">{% block center %} {% endblock %} </div>
+        <div class="right">{% block right %} {% endblock %}</div>
+        <div class="footer">{% block footer %} {% endblock %}</div>
     </div>
 </body>
-    
+
 <script src="{% static 'home.js' %}"></script>
-    {% block script %}    {% endblock %}
+{% block script %} {% endblock %}

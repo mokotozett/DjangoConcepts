@@ -1,0 +1,20 @@
+{% extends "db_base.html" %}
+{% load static %}
+
+
+
+{% block center %} 
+
+    <div class="article_detail">
+        <h2><a href="{% url 'db_models' %}"><img class="megumin" src="{% static 'gwen.gif' %}"></a></h2>
+
+        <div class="the_article">
+            <img src="{{ detail_dict.thumb.url }}" />
+            <h2>{{ detail_dict.title }}</h2>
+            <p>{{ detail_dict.body }}</p>
+            <p>{{ detail_dict.date }}</p>
+
+        </div>
+    </div>
+
+{% endblock %}
